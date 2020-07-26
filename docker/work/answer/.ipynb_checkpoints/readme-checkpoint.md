@@ -34,6 +34,11 @@ df.query('column1.str.contains("value")', engine="python")
 df.query('column1.str.match("^[A-F]")', engine="python")
 ```
 
+指定列の各行が条件と一致しているか調べる (queryはdfを返すがこのパターンは行のTrue/Falseの判定のみ行う)
+```
+df["column1"] >= condition
+```
+
 ソート
 
 ```
@@ -101,3 +106,9 @@ df.groupby("column1").agg({"column2":["max", "min"], "column2":["mean"]})
 パーセルタイル
 
 ```quantile(q=[0, 0.25,0.5,0.75,1])```
+
+Join
+
+```
+pd.merge(left_tb, right_tb[["fkey", "column1"]], on="fkey", how="inner")
+```
