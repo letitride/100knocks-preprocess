@@ -112,3 +112,15 @@ Join
 ```
 pd.merge(left_tb, right_tb[["fkey", "column1"]], on="fkey", how="inner")
 ```
+
+重複行の確認 column1とcolumn2の値がすでに存在する場合Trueを返す
+
+```
+df.duplicated(subset=['column1', 'column2'])
+```
+
+重複行の削除は以下のように行えばよい
+
+```
+df[~df.duplicated(subset=['column1', 'column2'])]
+```
