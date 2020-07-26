@@ -19,7 +19,7 @@ df[[column1, column2, ...]].query('column1.str.startswith("prefix")', engine="py
 後方一致
 
 ```
-df[[column1, column2, ...]].query('column1.str.endswith("prefix")', engine="python")
+df[[column1, column2, ...]].query('column1.str.endswith("suffix")', engine="python")
 ```
 
 部分一致
@@ -85,3 +85,19 @@ df_receipt.groupby("column1")[["column2", "column3"]].sum()
 ```
 df.groupby("column1").agg({"column2":["max", "min"], "column2":["mean"]})
 ```
+
+頻出値
+
+```mode()```
+
+標本分散
+
+```var(ddof=0)```
+
+標本標準偏差
+
+```std(ddof=0)```
+
+パーセルタイル
+
+```quantile(q=[0, 0.25,0.5,0.75,1])```
