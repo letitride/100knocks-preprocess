@@ -130,3 +130,9 @@ df[~df.duplicated(subset=['column1', 'column2'])]
 ```
 df.shift()
 ```
+
+クロス集計
+
+```
+df_summary = pd.pivot_table(df, index="column1_for_rows", columns="column2_for_col", values="column3_for_agg", aggfunc="sum").reset_index()
+```
