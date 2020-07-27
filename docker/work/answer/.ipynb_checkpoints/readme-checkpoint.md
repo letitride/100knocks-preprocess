@@ -178,6 +178,12 @@ print(s)
 pd.to_datetime( df["str_column"])
 ```
 
+unix timestampを日付型に
+
+```
+pd.to_datetime( df["unix_timestamp_column"], unit="s")
+```
+
 日付型を文字列型に
 
 ```
