@@ -111,6 +111,8 @@ df.groupby("column1").agg({"column2":["max", "min"], "column2":["mean"]})
 
 ```quantile(q=[0, 0.25,0.5,0.75,1])```
 
+```np.quantile( df["column"] , 0.25 )```
+
 Join
 
 ```
