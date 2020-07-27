@@ -91,6 +91,10 @@ df_receipt.groupby("column1")[["column2", "column3"]].sum()
 df.groupby("column1").agg({"column2":["max", "min"], "column2":["mean"]})
 ```
 
+ユニーク数のカウント
+
+```nunique()```
+
 頻出値
 
 ```mode()```
