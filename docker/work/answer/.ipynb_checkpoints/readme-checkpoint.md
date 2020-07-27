@@ -171,3 +171,15 @@ print(s)
 ```
 
 元に戻すには```unstack()```
+
+文字列を日付型に
+
+```
+pd.to_datetime( df["str_column"])
+```
+
+日付型を文字列型に
+
+```
+df["date_column"].dt.strftime("%Y%m%d")
+```
