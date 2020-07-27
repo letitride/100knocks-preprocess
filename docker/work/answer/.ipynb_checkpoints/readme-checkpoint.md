@@ -201,3 +201,7 @@ mapで要素の置換 mapにdictを与えるとkeyと完全一致する文字を
 ```
 df_customer["address"].map({"from_val1":"to_val1", "from_val2":"to_val2", ...})
 ```
+
+カテゴリデータの列をOne hot encoding (ダミー変数化)する
+
+```pd.get_dummies(df[["column1", "column2"]], columns=["column2"])```
