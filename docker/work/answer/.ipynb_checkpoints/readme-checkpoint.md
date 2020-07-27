@@ -193,3 +193,9 @@ pd.to_datetime( df["unix_timestamp_column"], unit="s")
 ```
 df["date_column"].dt.strftime("%Y%m%d")
 ```
+
+mapで要素の置換 mapにdictを与えるとkeyと完全一致する文字をvalueに置換する
+
+```
+df_customer["address"].map({"from_val1":"to_val1", "from_val2":"to_val2", ...})
+```
