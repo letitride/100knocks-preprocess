@@ -136,3 +136,38 @@ df.shift()
 ```
 df_summary = pd.pivot_table(df, index="column1_for_rows", columns="column2_for_col", values="column3_for_agg", aggfunc="sum").reset_index()
 ```
+
+値を置換
+
+```
+pd.replace("from_value", "to_value")
+```
+
+列データを行方向に置き換える
+
+```df.stack()```
+
+```
+print(df)
+#    A  B  C   D
+# 0  a  x  1  10
+# 1  a  y  2  20
+# 2  a  z  3  30
+
+s = df.stack()
+print(s)
+# 0  A     a
+#    B     x
+#    C     1
+#    D    10
+# 1  A     a
+#    B     y
+#    C     2
+#    D    20
+# 2  A     a
+#    B     z
+#    C     3
+#    D    30
+```
+
+元に戻すには```unstack()```
