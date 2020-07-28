@@ -225,3 +225,6 @@ df_customer["address"].map({"from_val1":"to_val1", "from_val2":"to_val2", ...})
 
 ```np.log(df.column + 1)```
 
+ランダム取得
+
+```df.sample(frac=0.01).head(10)```
