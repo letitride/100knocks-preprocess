@@ -220,3 +220,7 @@ df_customer["address"].map({"from_val1":"to_val1", "from_val2":"to_val2", ...})
 常用対数 10を底とする対数
 
 ```df.column.apply(lambda x: math.log10(x))```
+
+自然対数比
+
+```np.log(df.column + 1)```
