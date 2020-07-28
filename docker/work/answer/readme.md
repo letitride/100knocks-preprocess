@@ -228,3 +228,7 @@ df_customer["address"].map({"from_val1":"to_val1", "from_val2":"to_val2", ...})
 ランダム取得
 
 ```df.sample(frac=0.01).head(10)```
+
+列に含まれる値の割合を維持してランダムに抽出
+
+```train_test_split(df_customer, test_size=0.1, stratify=df_customer['column1'])```
