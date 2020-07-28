@@ -224,3 +224,4 @@ df_customer["address"].map({"from_val1":"to_val1", "from_val2":"to_val2", ...})
 自然対数比
 
 ```np.log(df.column + 1)```
+
