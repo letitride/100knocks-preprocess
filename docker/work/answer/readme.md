@@ -205,3 +205,11 @@ df_customer["address"].map({"from_val1":"to_val1", "from_val2":"to_val2", ...})
 カテゴリデータの列をOne hot encoding (ダミー変数化)する
 
 ```pd.get_dummies(df[["column1", "column2"]], columns=["column2"])```
+
+標準化
+
+```(df.column - df.column.mean()) / df.column.std()```
+
+標準化(scikit-lean)
+```preprocessing.scale(df['column1']) ```
+
