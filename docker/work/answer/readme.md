@@ -213,3 +213,10 @@ df_customer["address"].map({"from_val1":"to_val1", "from_val2":"to_val2", ...})
 標準化(scikit-lean)
 ```preprocessing.scale(df['column1']) ```
 
+正規化
+
+```preprocessing.MinMaxScaler```
+
+常用対数 10を底とする対数
+
+```df.column.apply(lambda x: math.log10(x))```
