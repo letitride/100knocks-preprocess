@@ -252,3 +252,6 @@ df.query('abs(ss) >= 3').head(10)
 
 ```relativedelta()```
 
+欠損値のレコード削除
+
+```df.dropna(inplace=True)```
