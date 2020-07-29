@@ -238,7 +238,8 @@ df_customer["address"].map({"from_val1":"to_val1", "from_val2":"to_val2", ...})
 
 列に含まれる値の割合を維持してランダムに抽出
 
-```train_test_split(df_customer, test_size=0.1, stratify=df_customer['column1'])
+```
+train_test_split(df_customer, test_size=0.1, stratify=df_customer['column1'])
 ```
 
 ハズレ値の抽出 標準化後の基準値が3以上のものをハズレ値とする
@@ -255,3 +256,9 @@ df.query('abs(ss) >= 3').head(10)
 欠損値のレコード削除
 
 ```df.dropna(inplace=True)```
+
+```
+df.fillna(
+    {'column1': "fill_value", 'column2': "fill_value", ... }
+)
+```
