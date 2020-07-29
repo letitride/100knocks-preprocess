@@ -10,6 +10,13 @@ df[[column1, column2, ...]]
 df[[column1, column2, ...]].query('column1 == "value1" & column2 != "value2" & (100 <= column3 <= 200)')
 ```
 
+queryの変数埋め込み
+
+```
+var1 = "123"
+df.query('column1 < @var1')
+```
+
 前方一致
 
 ```
@@ -211,7 +218,7 @@ df_customer["address"].map({"from_val1":"to_val1", "from_val2":"to_val2", ...})
 ```(df.column - df.column.mean()) / df.column.std()```
 
 標準化(scikit-lean)
-```preprocessing.scale(df['column1']) ```
+```preprocessing.scale(df['column1'])```
 
 正規化
 
@@ -231,4 +238,17 @@ df_customer["address"].map({"from_val1":"to_val1", "from_val2":"to_val2", ...})
 
 列に含まれる値の割合を維持してランダムに抽出
 
-```train_test_split(df_customer, test_size=0.1, stratify=df_customer['column1'])```
+```train_test_split(df_customer, test_size=0.1, stratify=df_customer['column1'])
+```
+
+ハズレ値の抽出 標準化後の基準値が3以上のものをハズレ値とする
+
+```
+df['ss'] = preprocessing.scale(df['column1'])
+df.query('abs(ss) >= 3').head(10)
+```
+
+日付の計算
+
+```relativedelta()```
+
