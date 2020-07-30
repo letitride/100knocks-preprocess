@@ -138,6 +138,12 @@ df.duplicated(subset=['column1', 'column2'])
 df[~df.duplicated(subset=['column1', 'column2'])]
 ```
 
+関数での重複行の削除
+
+```
+df.drop_duplicates(subset=['column1', 'column2'], keep='first', inplace=True)
+```
+
 行、列をずらす 時系列データに使用すると日付列と対応した値列が下方向に一つずれる
 
 ```
