@@ -272,3 +272,10 @@ df.fillna(
 numpyでの中央値、平均値(欠損値あり)
 
 ```np.nanmedian(df[column1])```, ```np.nanmean(df[column1])```
+
+アンダーサンプリング
+
+```
+rs = RandomUnderSampler()
+rs.fit_sample(df, df.column1)
+```
