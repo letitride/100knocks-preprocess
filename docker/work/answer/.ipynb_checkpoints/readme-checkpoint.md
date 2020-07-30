@@ -279,3 +279,9 @@ numpyでの中央値、平均値(欠損値あり)
 rs = RandomUnderSampler()
 rs.fit_sample(df, df.column1)
 ```
+
+データフレームからCSVファイルを作成
+
+```
+df.to_csv('./patto/csvfile.csv', encoding='UTF-8', index=False)
+```
