@@ -262,3 +262,7 @@ df.fillna(
     {'column1': "fill_value", 'column2': "fill_value", ... }
 )
 ```
+
+numpyでの中央値、平均値(欠損値あり)
+
+```np.nanmedian(df[column1])```, ```np.nanmean(df[column1])```
